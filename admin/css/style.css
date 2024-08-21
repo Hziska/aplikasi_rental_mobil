@@ -1,0 +1,16 @@
+.profil{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+.info_profil li{
+    margin:5px 0;
+}
+.info_profil li:nth-last-child(1) .online{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(18, 173, 18);
+}

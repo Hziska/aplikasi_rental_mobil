@@ -1,0 +1,288 @@
+/* warna emerald */
+.text-emerald{
+    color: #50B498;
+}
+.text-emerald2{
+    color: #56f0c5;
+}
+
+/* navigasi */
+.nav{
+    position: relative;
+}
+.navigasi-menu{
+    display: flex;
+    align-items: center;
+}
+.navigasi-menu li{
+    margin: 10px;
+    cursor: pointer;
+}
+.navigasi-menu li::after{
+    content: '';
+    width: 0;
+    display: block;
+    height: 2px;
+    background-color: #0d6efd;
+    transition: .8s ease-in-out;
+}
+.navigasi-menu li:hover::after{
+    width: 100%;
+}
+
+/* box img */
+.box-img{
+    width: 45px;
+    height: 45px;
+}
+.box-img.box-img img{
+    width: 100%;
+    height: 100%;
+}
+/* burger menu */
+.burger{
+    display: none;
+    flex-direction: column;
+    width: 35px;
+}
+.burger span{
+    display: block;
+    height: 7px;
+    background-color: #0d6efd;
+    margin: 3px 0;
+    transition: .7s ease-in-out;
+}
+.toggle span:nth-child(1){
+    transform-origin: 0 0;
+    transform: rotate(45deg) translateY(-4px);
+}
+.toggle span:nth-child(2){
+    opacity: 0;
+    transform: scale(-1);
+}
+.toggle span:nth-child(3){
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translateY(-5px);
+}
+
+/* login */
+.before_login{
+    transition: .8s ease-in-out;
+    padding: 5px 20px;
+}
+.before_login:hover{
+    background-color:#0d6efd ;
+    color: white;
+}
+
+
+/* jumbotron */
+.jumbotron{
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.502),rgba(0, 0, 0, 0.5)), 
+    url('../images/bgmobil.jpg') no-repeat center/cover fixed;
+    position: relative;
+    color: white;
+}
+.jumbotron .caption_jumbotron{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.jumbotron .caption_jumbotron .lihat{
+    transition: .8s ease-in-out;
+}
+.jumbotron .caption_jumbotron .lihat:hover{
+    background-color: #0d6efd;
+    color: white;
+}
+
+
+/* about */
+.about{
+    height: 100vh;
+    padding-top: 80px;
+}
+.about .judul::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    margin: auto;
+    margin-top: 10px;
+}
+.about .caption p{
+    text-align: justify;
+}
+.about figure{
+    width: 100%;
+    height: 300px;
+}
+.about figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* pilihan mobil */
+.choice_cars{
+    padding: 80px 20px;
+}
+.choice_cars .judul::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    margin-top: 10px;
+}
+.choice_cars .lihat{
+    font-size:18px;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+}
+.choice_cars .lihat:hover{
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, .6);
+}
+/* slider */
+.choice_cars .slider{
+    transition: transform  ease-in-out .7s;
+}
+.choice_cars .card-car .box-img{
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.choice_cars .card-car .box-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.choice_cars .card-car .overlay{
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease-in .5s;
+    border-radius: 10px;
+    opacity: 0;
+}
+.choice_cars .card-car .overlay:hover{
+    background-color: rgba(0, 0, 0, 0.513);
+    opacity: 1;
+}
+.choice_cars .card-car .overlay .btn-lihat{
+    transition: all ease-in .5s;
+}
+.choice_cars .card-car .overlay .btn-lihat:hover{
+    border-color: #0d6efd !important;
+    background-color: #0d6efd !important;
+}
+/* button */
+.btn-next{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.btn-prev{
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+
+/* footer */
+footer{
+    background-color:#0d6efd;
+
+}
+
+
+
+
+
+
+/* ============== view page ============= */
+#view .box-view-img{
+    width: 100%;
+    height: 450px;
+}
+#view .box-view-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============== view all page ============= */
+#viewall .box_img_viewall{
+    width: 100%;
+    height: 300px;
+}
+#viewall .box_img_viewall img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* media query */
+@media screen and (max-width:768px) {
+    /* navigasi menu */
+    .navigasi-menu{
+        display: block;
+        position: absolute;
+        background: white;
+        border: 2px solid #0d6efd;
+        border-radius: 10px;
+        width: 200px;
+        top: 50px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.249);
+        transition: .7s ease-in;
+        z-index: 999;
+    }
+    .menu-hide{
+        transform: translateX(-200%);
+    }
+   
+    /* burger */
+    .burger{
+        order: 1;
+        display: flex;
+    }
+    /* jduul brand */
+    .company_name{
+        order: 2;
+    }
+    .company_name a{
+        font-size:1.3rem !important;
+    }
+
+    /* login */
+    .before_login,.after_login{
+        order: 3;
+    }
+
+    /* btnlogin */
+    .before_login{
+        padding: 3px 12px ;
+        font-size:15px;
+    }
+
+    /* jumbotron */
+    .jumbotron .caption_jumbotron{
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* about */
+    .about{
+        height: 100%;
+    }
+
+    /* choice_cars */
+    .choice_cars .lihat i{
+        display: none;
+    }
+}   
